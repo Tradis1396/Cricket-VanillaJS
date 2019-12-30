@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>circ score</title>
+</head>
+
+<body>
+  <div>
+    <p id="scoreID">score</p>
+    <p id="scoreID_2">score</p>
+    <h1 id="res"></h1>
+  </div>
+  <script>
+    document.getElementById("scoreID").innerHTML = localStorage.getItem(
+      "contents"
+    );
+    var player_1 = document.getElementById("scoreID").innerHTML;
+    console.log(player_1);
+    console.log(player_1.substring(7, 9));
+    var num = Number(player_1.substring(7, 9));
+    console.log(num, "num");
+
+    document.getElementById("scoreID_2").innerHTML = localStorage.getItem(
+      "bat_2"
+    );
+    var player_2 = document.getElementById("scoreID_2").innerHTML;
+    console.log(player_2.substring(7, 9));
+    console.log(Number(player_2.substring(7, 9)));
+    var num2 = Number(player_2.substring(7, 9));
+    console.log(player_2);
+    if (num > num2) {
+      // alert(`team_1 has won`);
+      document.getElementById("res").innerHTML = "team_1 has won";
+    } else {
+      // alert(`team_2 has won`);
+      document.getElementById("res").innerHTML = "team_2 has won";
+    }
+  </script>
+</body>
+
+</html>
