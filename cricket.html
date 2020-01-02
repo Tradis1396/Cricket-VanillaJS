@@ -6,35 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>cricket</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 
 <body>
-  <div>
-    <h1>player</h1>
-    <p id="scoreID_1">
-      score:
-    </p>
-    <p id="total_ID_1">
-      total player 1:
-    </p>
-    <p id="scoreID_2">
-      score:
-    </p>
-    <p id="total_ID_2">
-      total player 2:
-    </p>
-    <p id="overID">
-      over:
-    </p>
-    <button id="batID_1" onclick="bat('batID_1' , 'total_ID_1');storage();">
-      Bat_1
+  <div class="container-fluid">
+  <div class="jumbotron">
+    <div class="row">
+    <div class="col-xl-4">
+    <h1 id="eachplayerID">player</h1>
+    <h4 id="scoreID_1">team_Current_Score:
+    </h4>
+    <h4 id="total_ID_1">total_Runs:
+    </h4>
+    <h4 id="wicket_ID_1">Wickets:
+    </h4>
+    <h4 id="scoreID_2">team_Current_Score:
+    </h4>
+    <h4 id="total_ID_2">total_Runs:
+    </h4>
+    <h4 id="wicket_ID_2">Wickets:
+    </h4>
+    <h4 id="overID">over:
+    </h4>
+    <button class="btn btn-primary"  id="batID_1" onclick="bat('batID_1' , 'total_ID_1' , 'scoreID_1');">Team_1
+  </button>
+    <button class="btn btn-primary" id="batID_2" onclick="bat('batID_2' , 'total_ID_2' , 'scoreID_2');">Team_2
     </button>
-    <button id="batID_2" onclick="bat('batID_2' , 'total_ID_2');storage()">
-      Bat_2
-    </button>
-    <a href="cricscore.html" target="_blank" rel="noopener noreferrer">final score</a>
+ 
+<button class="btn btn-success" id="outputID" onclick="output()" >OUTPUT</button>
+  
   </div>
-  <script src="cricket.js"></script>
+  <div class="col-xl-4">
+    <h3 id="timerID"></h3>
+  </div>
+  <div class="col-xl-4">
+    <h3 id="winID">
+
+    </h3>
+  </div>
+</div>
+</div>
+
+<div class="row ">
+  <div class="col-xl-6">
+    <h5 id="score_1">
+
+    </h5>
+  </div>
+  <div class="col-xl-6">
+    <h5 id="score_2">
+
+    </h5>
+  </div>
+</div>
+</div>
+  <script src="circNew.js"></script>
 
   </script>
 </body>
