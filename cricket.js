@@ -73,11 +73,8 @@ var playersFunction = function (array, total, ball_count, randomValue, playersAr
     document.getElementById(scoreID).innerHTML = `team_Current_Score::: ${array}`;
     document.getElementById(divId).innerHTML = `total_Runs::: ${totalScore}`;
 
-    if ([6, 12, 18, 24, 30, 36, 42, 48, 54, 60].indexOf(ball_count) > -1) {
-        match = true;
-        document.getElementById("overID").innerHTML = `over: ${ball_count / 6}`
-    }
-    if (randomValue == 0 || match == true) {
+    if (randomValue == 0 || array.length == 6) {
+
         if (randomValue == 0 && array == team_1_array) { outcount_1 += 1; document.getElementById("wicket_ID_1").innerHTML = `Wickets = ${outcount_1} wicket` }
         else if (randomValue == 0 && array == team_2_array) { outcount_2 += 1; document.getElementById("wicket_ID_2").innerHTML = `Wickets = ${outcount_2} wicket` }
 
